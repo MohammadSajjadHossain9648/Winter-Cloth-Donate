@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB0M0stXtvZTg5hh1L67YuNmkpzCGSw23g",
-  authDomain: "winter-cloth-donate.firebaseapp.com",
-  projectId: "winter-cloth-donate",
-  storageBucket: "winter-cloth-donate.firebasestorage.app",
-  messagingSenderId: "150914478066",
-  appId: "1:150914478066:web:ba819658c315be5563456b"
+  apiKey: "AIzaSyAqawrVFOxoGdWFPHzwaOKgcau1hUF0LxA",
+  authDomain: "winter-cloth-donate-private.firebaseapp.com",
+  projectId: "winter-cloth-donate-private",
+  storageBucket: "winter-cloth-donate-private.firebasestorage.app",
+  messagingSenderId: "274151973391",
+  appId: "1:274151973391:web:827f297330500d887bb97a"
 };
 
 // Initialize Firebase
