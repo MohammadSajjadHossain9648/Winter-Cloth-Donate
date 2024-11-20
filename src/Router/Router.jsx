@@ -4,7 +4,7 @@ import Home from "../components/Home/Home";
 import DonationCampaigns from "../components/DonationCampaigns/DonationCampaigns";
 import Help from "../components/Help/Help";
 import Dashboard from "../components/Dashboard/Dashboard";
-import Banner from "../components/Banner/Banner";
+import About from "../components/About/About";
 
 const router = createBrowserRouter([
     {
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
                 loader: () => fetch('/banners.json'),
                 children: [
                     {
-                        path: "/",
-                        element: <Banner></Banner>,
+                        path: "/About",
+                        element: <About></About>
                     }
                 ]
             },
