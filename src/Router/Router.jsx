@@ -13,10 +13,15 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('/banners.json'),
-                children: [
+                loader: async() => {
+                    const bannersJSON = await fetch('/banners.json');
+                    const banners = await bannersJSON.json();
 
-                ]
+                    const faqsJSON = await fetch('/faqs.json');
+                    const faqs = await faqsJSON.json();
+
+                    return { banners, faqs };
+                },
             },
             {
                 path: "/DonationCampaigns",

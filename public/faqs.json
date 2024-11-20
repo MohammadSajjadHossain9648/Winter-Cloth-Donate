@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "question": "What is the mission of your organization?",
+      "answer": "Our mission is to provide essential support to those in need by collecting donations and organizing charity events aimed at improving lives and communities globally."
+    },
+    {
+      "id": 2,
+      "question": "How can I donate to your charity?",
+      "answer": "Users can donate gently used or new winter items, such as jackets, coats, scarves, gloves, hats, and blankets. These contributions directly go to individuals and families in need. Collection points are listed on the website for easy drop-off."
+    },
+    {
+      "id": 3,
+      "question": "Can I donate money instead of goods or services?",
+      "answer": "Yes, we accept money donations. Please reach out to us through our email or phone."
+    },
+    {
+      "id": 4,
+      "question": "How do I become a volunteer?",
+      "answer": "To become a volunteer, visit our website and contact with us through email or phone. We will guide you on available opportunities based on your skills and interests."
+    },
+    {
+      "id": 5,
+      "question": "Can I donate anonymously?",
+      "answer": "Yes, we respect the privacy of our donors. You can make a donation anonymously, and we will not disclose your personal information without your consent."
+    },
+    {
+      "id": 6,
+      "question": "How do I contact you for more information?",
+      "answer": "For more information, you can reach out to us through our contact details in Donation Campaigns page based on your division."
+    }
+]

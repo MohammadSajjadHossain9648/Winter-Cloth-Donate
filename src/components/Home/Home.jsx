@@ -1,13 +1,14 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import { Outlet, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import About from '../About/About';
 import HowToHelp from '../HowToHelp/HowToHelp';
 import Impact from '../Impact/Impact';
+import Faq from '../Faq/Faq';
 
 
 const Home = () => {
-    const banners = useLoaderData();
+    const {banners, faqs} = useLoaderData();
 
     return (
         <div>
@@ -23,8 +24,8 @@ const Home = () => {
             {/* Impact section */}
             <Impact></Impact>
 
-            {/* common section */}
-            <Outlet></Outlet>
+            {/* faq section */}
+            <Faq faqs={faqs}></Faq>
         </div>
     );
 };
