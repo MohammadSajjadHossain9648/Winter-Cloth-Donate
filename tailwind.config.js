@@ -22,11 +22,15 @@ export default {
         dark_blue_bg_color: 'rgba(9, 8, 15, 0.05)',
 
         green_color: 'rgb(48, 156, 8)',
+        green_bg_color: 'rgba(48, 156, 8, 0.1)',
 
         yellow_color: 'rgb(249, 192, 4)',
       },
       backgroundImage: {
         'bgImg': "url('/src/assets/bg.jpg')",
+      },
+      gridTemplateColumns: {
+        footerCustom: '.8fr 1.2fr'
       }
     },
   },
