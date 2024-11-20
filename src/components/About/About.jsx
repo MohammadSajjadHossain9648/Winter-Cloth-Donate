@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Heading from '../Heading/Heading';
 
 
 const About = () => {
@@ -9,22 +10,18 @@ const About = () => {
     }
 
     return (
-        <div className="p-16 bg-bgImg bg-no-repeat bg-cover">
+        <div className="py-16 bg-bgImg bg-no-repeat bg-cover">
                 {/* mission section */}
-                <div className="sm:w-full md:w-3/4 mx-auto text-center space-y-4 mb-16">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-dark_blue_color mb-6">
-                        Our Mission
-                    </h2>
-                    <p className="text-lg lg:text-xl text-Shade_black_color_1 mb-12">
-                        We strive to bring warmth and hope to communities during the winter
+                <Heading
+                    title='Our Mission'
+                    description='We strive to bring warmth and hope to communities during the winter
                         season by organizing donation drives, supporting local initiatives,
                         and fostering a spirit of giving. Together, we can create a brighter
-                        and warmer future for those in need.
-                    </p>
-                </div>
+                        and warmer future for those in need.'
+                ></Heading>
 
                 {/* How to Contribute Section */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 shrink-0">
+                <div className="mx-16 grid grid-cols-1 md:grid-cols-3 gap-12 shrink-0">
                     {/* Donate Winter Clothing */}
                     <div className="bg-white bg-opacity-80 p-6 rounded-lg shadow-md">
                         <h3 className="text-2xl font-semibold text-blue-700 mb-4">Donate Winter Clothing</h3>

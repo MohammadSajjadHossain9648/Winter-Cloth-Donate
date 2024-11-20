@@ -2,9 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../components/MainLayout/MainLayout";
 import Home from "../components/Home/Home";
 import DonationCampaigns from "../components/DonationCampaigns/DonationCampaigns";
-import Help from "../components/Help/Help";
+import HowToHelp from "../components/HowToHelp/HowToHelp";
 import Dashboard from "../components/Dashboard/Dashboard";
-import About from "../components/About/About";
 
 const router = createBrowserRouter([
     {
@@ -16,10 +15,7 @@ const router = createBrowserRouter([
                 element: <Home></Home>,
                 loader: () => fetch('/banners.json'),
                 children: [
-                    {
-                        path: "/About",
-                        element: <About></About>
-                    }
+
                 ]
             },
             {
@@ -27,8 +23,8 @@ const router = createBrowserRouter([
                 element: <DonationCampaigns></DonationCampaigns>
             },
             {
-                path: "/Help",
-                element: <Help></Help>
+                path: "/HowToHelp",
+                element: <HowToHelp></HowToHelp>
             },
             {
                 path: "/Dashboard",

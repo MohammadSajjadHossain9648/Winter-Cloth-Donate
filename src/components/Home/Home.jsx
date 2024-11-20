@@ -1,7 +1,8 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import { useLoaderData } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import About from '../About/About';
+import HowToHelp from '../HowToHelp/HowToHelp';
 
 
 const Home = () => {
@@ -14,6 +15,12 @@ const Home = () => {
 
             {/* About section */}
             <About></About>
+
+            {/* HowToHelp section */}
+            <HowToHelp></HowToHelp>
+
+            {/* common section */}
+            <Outlet></Outlet>
         </div>
     );
 };

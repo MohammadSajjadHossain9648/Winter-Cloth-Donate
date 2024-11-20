@@ -18,7 +18,7 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content rounded-box z-[1] backdrop-blur-md mt-3 w-44 p-2 space-y-3">
                             <li><NavLink to={'/'} className="hover:font-bold hover:text-green_color">Home</NavLink></li>
                             <li><NavLink to={'/DonationCampaigns'} className="hover:font-bold hover:text-green_color">Donation Campaigns</NavLink></li>
-                            <li><NavLink to={'/Help'} className="hover:font-bold hover:text-green_color">How to Help</NavLink></li>
+                            <li><NavLink to={'/HowToHelp'} className="hover:font-bold hover:text-green_color">How to Help</NavLink></li>
                             <li><NavLink to={'/Dashboard'} className="hover:font-bold hover:text-green_color">Dashboard</NavLink></li>
                     </ul>
                 </div>
@@ -31,7 +31,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal md:space-x-4 lg:space-x-8">
                     <NavLink to={'/'} className={({isActive}) => isActive ? "font-bold text-green_color" : ""}>Home</NavLink>
                     <NavLink to={'/DonationCampaigns'} className={({isActive}) => isActive ? "font-bold text-green_color" : ""}>Donation Campaigns</NavLink>
-                    <NavLink to={'/Help'} className={({isActive}) => isActive ? "font-bold text-green_color" : ""}>How to Help</NavLink>
+                    <NavLink to={'/HowToHelp'} className={({isActive}) => isActive ? "font-bold text-green_color" : ""}>How to Help</NavLink>
                     <NavLink to={'/Dashboard'} className={({isActive}) => isActive ? "font-bold text-green_color" : ""}>Dashboard</NavLink>
                 </ul>
             </div>
