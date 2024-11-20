@@ -7,6 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        white_color: 'rgb(255,255,255)',
+
         green_color: '#4A7C59 ',
       }
     },

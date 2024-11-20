@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 
 const MainLayout = () => {
     return (
-        <div className='max-w-7xl mx-auto'>
+        <div className='max-w-7xl mx-auto font_poppins'>
             {/* navbar section */}
             <Navbar></Navbar>
 

@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.font_.poppins {
+.font_poppins {
     font-family: "Poppins", sans-serif;
 }
 .font_playfair_display {
