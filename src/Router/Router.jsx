@@ -4,6 +4,8 @@ import Home from "../components/Home/Home";
 import DonationCampaigns from "../components/DonationCampaigns/DonationCampaigns";
 import HowToHelp from "../components/HowToHelp/HowToHelp";
 import Dashboard from "../components/Dashboard/Dashboard";
+import LogIn from "../components/LogIn/LogIn";
+import SignUp from "../components/SignUp/SignUp";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
             {
                 path: "/Dashboard",
                 element: <Dashboard></Dashboard>
+            },
+            {
+                path: "/LogIn",
+                element: <LogIn></LogIn>
+            },
+            {
+                path: "/SignUp",
+                element: <SignUp></SignUp>
             },
 
         ]
