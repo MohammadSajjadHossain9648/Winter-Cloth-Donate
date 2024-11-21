@@ -36,7 +36,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link className="bg-white_color border-none rounded-full">
+                <Link to={'/LogIn'} className="bg-white_color border-none rounded-full">
                     <BsPersonCircle className="text-green_color h-8 w-12" />
                 </Link>
             </div>
