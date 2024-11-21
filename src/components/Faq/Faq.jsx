@@ -11,7 +11,7 @@ const Faq = ({faqs}) => {
     };
 
     return (
-        <div className="px-16 py-28 bg-bgImg bg-no-repeat bg-cover grid sm:grid-cols-1 md:grid-cols-2 gap-8 space-y-4">
+        <div className="px-16 py-28 bg-bgImg bg-cover grid sm:grid-cols-1 md:grid-cols-2 gap-8 space-y-4">
             {/* Left Image Section */}
             <img src={faqImg} className="w-full h-full" />
 

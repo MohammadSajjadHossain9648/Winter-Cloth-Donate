@@ -25,7 +25,14 @@ const router = createBrowserRouter([
             },
             {
                 path: "/DonationCampaigns",
-                element: <DonationCampaigns></DonationCampaigns>
+                element: <DonationCampaigns></DonationCampaigns>,
+                loader: async() => {
+                    const dataJSON = await fetch('/campaigns.json');
+                    const dataObj = await dataJSON.json();
+
+                    const campaigns = dataObj.filter((campaign) => campaign.status === "Active");
+                    return campaigns;
+                }
             },
             {
                 path: "/HowToHelp",
