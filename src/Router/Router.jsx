@@ -2,7 +2,6 @@ import { createBrowserRouter, useParams } from "react-router-dom";
 import MainLayout from "../components/MainLayout/MainLayout";
 import Home from "../components/Home/Home";
 import DonationCampaigns from "../components/DonationCampaigns/DonationCampaigns";
-import HowToHelp from "../components/HowToHelp/HowToHelp";
 import Dashboard from "../components/Dashboard/Dashboard";
 import LogIn from "../components/LogIn/LogIn";
 import SignUp from "../components/SignUp/SignUp";
@@ -11,6 +10,7 @@ import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import MainErrorLayout from "../components/MainErrorLayout/MainErrorLayout";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
 
 const router = createBrowserRouter([
     {
@@ -63,6 +63,10 @@ const router = createBrowserRouter([
             {
                 path: "/LogIn",
                 element: <LogIn></LogIn>
+            },
+            {
+                path: "/ForgetPassword",
+                element: <ForgetPassword></ForgetPassword>
             },
             {
                 path: "/SignUp",

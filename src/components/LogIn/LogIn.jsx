@@ -55,7 +55,7 @@ const LogIn = () => {
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             <div className="flex justify-between">
                                 <label className="label">
-                                    <Link to={'#'} className="label-text-alt link link-hover">Forgot password?</Link>
+                                    <Link to={'/ForgetPassword'} className="label-text-alt link link-hover">Forgot password?</Link>
                                 </label>
                                 <label className="label">
                                     <Link to={'/SignUp'} className="label-text-alt link link-hover">Create Account</Link>
