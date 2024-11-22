@@ -24,6 +24,8 @@ export default {
         green_color: 'rgb(48, 156, 8)',
         green_bg_color: 'rgba(48, 156, 8, 0.1)',
 
+        red_color: 'rgb(156, 8, 8)',
+
         yellow_color: 'rgb(249, 192, 4)',
       },
       backgroundImage: {

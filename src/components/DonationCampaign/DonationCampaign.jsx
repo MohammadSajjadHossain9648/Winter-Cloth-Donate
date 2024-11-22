@@ -2,11 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const DonationCampaign = ({ campaign }) => {
-    const {image, title, description, division} = campaign;
+    const {id, image, title, description, division} = campaign;
 
     const navigate = useNavigate();
     const handleDonateNow = () => {
-        navigate('/');
+        navigate(`/DonationDetail/${id}`);
     };
 
     return (

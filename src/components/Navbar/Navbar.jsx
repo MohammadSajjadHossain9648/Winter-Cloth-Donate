@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo  from "../../assets/logo.webp";
 import { Link, NavLink } from 'react-router-dom';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { BsPersonCircle } from 'react-icons/bs';
+import { authContext } from '../AuthProvider/AuthProvider';
 
 
 const Navbar = () => {
+    const {user, handleToSignOut} = useContext(authContext);
+
     return (
-        <div className="navbar w-11/12 mx-auto">
+        <div className="navbar sm:w-full lg:w-11/12 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -36,9 +39,19 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to={'/LogIn'} className="bg-white_color border-none rounded-full">
-                    <BsPersonCircle className="text-green_color h-8 w-12" />
-                </Link>
+                {
+                    (user?.email) ? (
+                        <div className="flex items-center">
+                            <img className='h-12 w-12 rounded-full' src={user.photoURL} alt="user image" />
+                            <button onClick={handleToSignOut} className="btn ml-4">LogOut</button>
+                        </div>
+                    ) : (
+                    <Link to={'/LogIn'} className="bg-white_color border-none rounded-full">
+                        <BsPersonCircle className="text-green_color h-8 w-12" />
+                    </Link>
+                    )
+                }
+
             </div>
         </div>
     );

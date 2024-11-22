@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import auth from '../../firebase/firebase.config';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 
 
 export const authContext = createContext();
@@ -24,11 +24,13 @@ const AuthProvider = ({route}) => {
     const updateUser = (name, image) => {
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: image
-          })
+        })
     }
 
 
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if(currentUser){
@@ -37,6 +39,7 @@ const AuthProvider = ({route}) => {
             else{
                 setUser(null);
             }
+            setLoading(false);
 
             return () => {
                 unsubscribe();
@@ -45,7 +48,7 @@ const AuthProvider = ({route}) => {
     })
 
 
-    const authInfo = {handleToLogin, handleToSignUp, handleToSignOut, handleToGoogle, updateUser, user, setUser};
+    const authInfo = {handleToLogin, handleToSignUp, handleToSignOut, handleToGoogle, updateUser, user, setUser, loading, setLoading};
 
 
     return (
