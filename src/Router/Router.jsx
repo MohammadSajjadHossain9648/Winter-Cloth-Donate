@@ -10,6 +10,7 @@ import DonationDetail from "../components/DonationDetail/DonationDetail";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import MainErrorLayout from "../components/MainErrorLayout/MainErrorLayout";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,12 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <Dashboard></Dashboard>
                 </PrivateRoute>
+            },
+            {
+                path: "/UpdateProfile",
+                element: <PrivateRoute>
+                     <UpdateProfile></UpdateProfile>
+                 </PrivateRoute>
             },
             {
                 path: "/LogIn",

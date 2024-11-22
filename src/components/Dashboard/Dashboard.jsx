@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { authContext } from '../AuthProvider/AuthProvider';
+import { Link } from 'react-router-dom';
+import UpdateProfile from '../UpdateProfile/UpdateProfile';
 
 
 const Dashboard = () => {
@@ -20,7 +22,7 @@ const Dashboard = () => {
                     <img src={photoURL} alt={displayName} className="w-16 h-16" />
                 </div>
                 <p className='text-xl text-dark_blue_color'>Email: {email}</p>
-                <button className="btn btn-primary text-lg font-bold text-white_color">Update</button>
+                <Link to={'/UpdateProfile'} className="btn btn-primary text-lg font-bold text-white_color">Update</Link>
             </div>
         </div>
     );
