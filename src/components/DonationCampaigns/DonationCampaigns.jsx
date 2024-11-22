@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import DonationCampaign from '../DonationCampaign/DonationCampaign';
-import bgImg from '../../assets/bg.jpg';
 
 const DonationCampaigns = () => {
     const campaigns = useLoaderData();
+    console.log(campaigns);
 
     return (
         <div className='bg-bgImg bg-cover sm:px-8 lg:px-16 py-16'>
@@ -13,7 +13,7 @@ const DonationCampaigns = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 sm:gap-4 lg:gap-8">
                 {
                     campaigns.map((campaign, index) => (
-                        <DonationCampaign key={index} campaign={campaign} />
+                        <DonationCampaign key={index} campaign={campaign}></DonationCampaign>
                     ))
                 }
             </div>

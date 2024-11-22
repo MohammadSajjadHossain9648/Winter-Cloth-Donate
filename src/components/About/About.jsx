@@ -1,13 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Heading from '../Heading/Heading';
 
 
 const About = () => {
-    const navigate = useNavigate();
-    const handleToClick = () => {
-        // navigate(<Banner></Banner>);
-    }
+    const scrollToSection = () => {
+        document.getElementById('how-to-help').scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <div id='about' className="py-16 bg-bgImg bg-no-repeat bg-cover">
@@ -28,9 +27,9 @@ const About = () => {
                         <p className="text-gray-700">
                             Users can donate gently used or new winter items, such as jackets, coats, scarves, gloves, hats, and blankets. These contributions directly go to individuals and families in need. Collection points are listed on the website for easy drop-off.
                         </p>
-                        <button onClick={handleToClick} className="btn mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        <Link to={'/DonationCampaigns'} className="btn mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                             Donate Now
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Spread */}
@@ -39,7 +38,7 @@ const About = () => {
                         <p className="text-gray-700">
                             Users can amplify the impact by sharing the website’s mission on social media, with friends, and within local communities. The more awareness raised, the more support can be gathered.
                         </p>
-                        <button onClick={handleToClick} className="btn mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        <button onClick={scrollToSection} className="btn mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                             Learn More
                         </button>
                     </div>
@@ -51,9 +50,9 @@ const About = () => {
                             Join us in distributing donations, organizing events, or helping
                             out with campaigns. Your time can make a significant impact!
                         </p>
-                        <button onClick={handleToClick} className="btn mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        <Link to={'/SignUp'} className="btn mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                             Sign Up
-                        </button>
+                        </Link>
                     </div>
                 </div>
         </div>

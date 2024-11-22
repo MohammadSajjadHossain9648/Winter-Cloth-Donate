@@ -64,7 +64,7 @@ const HowToHelp = () => {
                 <p className="text-lg mb-5 text-shade_black_color_1">
                     Join us in making a difference this winter. Visit our campaigns page to find more details about active drives and how you can contribute.
                 </p>
-                <Link to={''} className="btn bg-green_color text-white_color px-5 py-3 rounded-lg">View Campaigns</Link>
+                <Link to={'/DonationCampaigns'} className="btn bg-green_color text-white_color px-5 py-3 rounded-lg">View Campaigns</Link>
             </div>
         </div>
     );
