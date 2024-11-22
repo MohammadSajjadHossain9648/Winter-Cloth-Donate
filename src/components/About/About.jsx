@@ -10,7 +10,7 @@ const About = () => {
     }
 
     return (
-        <div className="py-16 bg-bgImg bg-no-repeat bg-cover">
+        <div id='about' className="py-16 bg-bgImg bg-no-repeat bg-cover">
                 {/* mission section */}
                 <Heading
                     title='Our Mission'

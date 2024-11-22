@@ -16,7 +16,7 @@ const ForgetPassword = () => {
             }, 5000);
         }
         else{
-            alert('Please enter a valid email address.');
+            toast.warning('Please enter a valid email address.');
         }
     };
 

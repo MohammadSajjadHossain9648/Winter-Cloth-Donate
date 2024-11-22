@@ -28,22 +28,22 @@ const SignUp = () => {
         const conPassword = e.target.conPassword.value;
 
         // check password condition
-        // if(password.length <6){
-        //     toast.error("Password must be at least 6 characters");
-        //     return ;
-        // }
-        // if(password != conPassword){
-        //     toast.error("Passwords didn't match");
-        //     return ;
-        // }
-        // if(!/[A-Z]/.test(password)){
-        //     toast.error("Password must include at least one uppercase letter.");
-        //     return ;
-        // }
-        // if(!/[a-z]/.test(password)){
-        //     toast.error("Password must include at least one lowercase letter.");
-        //     return ;
-        // }
+        if(password.length <6){
+            toast.error("Password must be at least 6 characters");
+            return ;
+        }
+        if(password != conPassword){
+            toast.error("Passwords didn't match");
+            return ;
+        }
+        if(!/[A-Z]/.test(password)){
+            toast.error("Password must include at least one uppercase letter.");
+            return ;
+        }
+        if(!/[a-z]/.test(password)){
+            toast.error("Password must include at least one lowercase letter.");
+            return ;
+        }
 
         handleToSignUp(email, password)
         .then(res => {

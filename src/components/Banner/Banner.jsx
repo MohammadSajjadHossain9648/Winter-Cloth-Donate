@@ -8,6 +8,10 @@ import "animate.css";
 import { Link } from "react-router-dom";
 
 const Banner = ({ banners }) => {
+    const scrollToSection = () => {
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div>
             <Swiper
@@ -36,7 +40,7 @@ const Banner = ({ banners }) => {
                             <p className="mt-3 sm:w-3/5 md:w-3/4 lg:w-3/5 sm:text-4xl md:text-6xl font-bold text-white_color font_playfair_display animate__animated animate__fadeInUp animate__delay-2s">{banner.title}</p>
                             {/* button */}
                             <button className="btn border-none mt-5 font-bold bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded-lg animate__animated animate__fadeInUp animate__delay-3s">
-                                <Link to={'/About'}>Learn More</Link>
+                                <Link><button onClick={scrollToSection}>Learn More</button></Link>
                             </button>
                         </div>
                     </SwiperSlide>

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { authContext } from '../AuthProvider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 const LogIn = () => {
@@ -19,7 +20,7 @@ const LogIn = () => {
             navigate(location.state?.from || '/');
         })
         .catch(err => {
-            alert(err.message);
+            toast.error(err.message);
         })
     };
 
@@ -27,6 +28,9 @@ const LogIn = () => {
         handleToGoogle()
         .then(res => {
             navigate(location.state?.from || '/');
+        })
+        .catch(err => {
+            toast.error(err.message);
         })
     }
 
