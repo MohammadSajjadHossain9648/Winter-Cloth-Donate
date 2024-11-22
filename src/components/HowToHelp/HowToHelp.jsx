@@ -14,7 +14,7 @@ const HowToHelp = () => {
     ];
 
     return (
-        <div className="bg-shade_white_color2 px-16 py-28">
+        <div id='how-to-help' className="bg-shade_white_color2 px-16 py-28">
             {/* header section */}
             <Heading
                 title='How It Works'

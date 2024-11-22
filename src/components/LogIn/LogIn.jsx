@@ -16,7 +16,7 @@ const LogIn = () => {
 
         handleToLogin(email, password)
         .then(res => {
-            navigate(location.state.from)
+            navigate(location.state?.from || '/');
         })
         .catch(err => {
             alert(err.message);
@@ -26,7 +26,7 @@ const LogIn = () => {
     const handleToGoogleLogIn = () => {
         handleToGoogle()
         .then(res => {
-            navigate(location.state.from)
+            navigate(location.state?.from || '/');
         })
     }
 

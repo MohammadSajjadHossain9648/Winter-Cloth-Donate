@@ -8,6 +8,8 @@ import LogIn from "../components/LogIn/LogIn";
 import SignUp from "../components/SignUp/SignUp";
 import DonationDetail from "../components/DonationDetail/DonationDetail";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
+import MainErrorLayout from "../components/MainErrorLayout/MainErrorLayout";
 
 const router = createBrowserRouter([
     {
@@ -46,10 +48,6 @@ const router = createBrowserRouter([
                 }
             },
             {
-                path: "/HowToHelp",
-                element: <HowToHelp></HowToHelp>
-            },
-            {
                 path: "/Dashboard",
                 element: <PrivateRoute>
                     <Dashboard></Dashboard>
@@ -63,7 +61,15 @@ const router = createBrowserRouter([
                 path: "/SignUp",
                 element: <SignUp></SignUp>
             },
-
+        ]
+    },
+    {
+        element: <MainErrorLayout></MainErrorLayout>,
+        children: [
+            {
+                path: "*",
+                element: <ErrorPage></ErrorPage>
+            }
         ]
     }
 ]);
